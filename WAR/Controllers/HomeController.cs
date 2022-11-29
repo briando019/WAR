@@ -18,10 +18,6 @@ namespace WAR.Controllers
         public IActionResult Index()
         {
 
-            nonShuffle = deckOfCards;
-            
-
-            
             return View();
         }
 
