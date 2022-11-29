@@ -12,6 +12,7 @@ namespace WAR.Controllers
         private static DeckOfCards deckOfCards = new DeckOfCards();
         public HomeController(ILogger<HomeController> logger)
         {
+            
             _logger = logger;
         }
 

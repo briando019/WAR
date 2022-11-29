@@ -1,19 +1,24 @@
 ﻿using WAR.Interfaces;
 using WAR.Models;
+using WAR.Models.BaseModels;
 
 namespace WAR.Service
 {
-    public class Computer : IPlayer
+    public class Computer : PlayerBaseModel, IPlayer
 
     {
-        public List<Card> PlayerHand { get; set; }
-        public int score { get; set; }
-        public int beenSlapped { get; set; }
-        public int blockedSlaps { get; set; }
+        public Computer() {
+            this.PlayerHand = new List<Card>();
+            this.score = 0;
+            this.blockedSlaps = 0;
+            this.blockedSlaps = 0;
+        }
 
         public int BlockSlap(int blockInt)
         {
-            throw new NotImplementedException();
+            Random random = new Random();
+            int blockDefenceNumber = random.Next(100);
+            return blockDefenceNumber;
         }
 
         public void DrawCard(Card cardDrawn)
