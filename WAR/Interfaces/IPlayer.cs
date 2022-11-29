@@ -10,7 +10,7 @@ namespace WAR.Interfaces
         public int beenSlapped { get; set; }
         public int blockedSlaps { get; set; }
 
-        public Card DrawCard(Card cardDrawn);
+        public void DrawCard(Card cardDrawn);
 
         public List<Card> LookAtHand();
 
