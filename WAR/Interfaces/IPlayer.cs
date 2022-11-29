@@ -21,6 +21,8 @@ namespace WAR.Interfaces
         public int getSlapCount();
         public int getSlapBlockCount();
         public void resetPlayerHand();
+        public void setSlapCount();
+        public void setBlockCount();
 
         
 
