@@ -5,8 +5,8 @@ namespace WAR.Service
 {
     public class DeckOfCards
     {
-        List<Card> cardDeck = new List<Card>();
-
+        List<Card> cardDeck;
+        private static readonly int dealOutLimit = 5;
         public DeckOfCards()
         {
             this.cardDeck = createDeck();
@@ -16,7 +16,7 @@ namespace WAR.Service
         {
             //ToDo: return card removed
             Card cardRemoved = this.cardDeck[0];
-            cardDeck.RemoveAt(0);
+            this.cardDeck.RemoveAt(0);
             return cardRemoved;
             
         }
@@ -41,15 +41,18 @@ namespace WAR.Service
             this.cardDeck = createDeck();
         }
 
+        /// <summary>
+        /// This is used to deal out cards to the player passed in. 
+        /// This will deal out 5 cards to a player
+        /// </summary>
+        /// <param name="player">Takes in a Player Object</param>
         public void dealCards(Player player)
         {
-            while(player.PlayerHand.Count != 5)
+            while(player.PlayerHand.Count != dealOutLimit)
             {
-                Card cardDrawn = removeFromTop();
+                Card cardDrawn = this.removeFromTop();
                 player.DrawCard(cardDrawn);
-            }
-            
-            //TODO: Deal Card out to the player
+            }     
         }
 
         /// <summary>
