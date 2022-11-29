@@ -14,5 +14,11 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background: #132B41;
+    color: #E6C8A2;
+}
+
+a {
+    color: #E6C8A2 !important;
 }

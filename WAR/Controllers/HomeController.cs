@@ -9,7 +9,6 @@ namespace WAR.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private static DeckOfCards deckOfCards = new DeckOfCards();
         public HomeController(ILogger<HomeController> logger)
         {
             
@@ -22,7 +21,7 @@ namespace WAR.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Rules()
         {
 
             return View();
