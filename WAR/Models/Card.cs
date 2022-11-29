@@ -1,4 +1,4 @@
-﻿namespace WAR.Service
+﻿namespace WAR.Models
 {
     public class Card
     {

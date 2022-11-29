@@ -1,4 +1,5 @@
 ﻿using WAR.Interfaces;
+using WAR.Models;
 
 namespace WAR.Service
 {

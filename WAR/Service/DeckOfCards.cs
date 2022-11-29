@@ -1,4 +1,6 @@
-﻿namespace WAR.Service
+﻿using WAR.Models;
+
+namespace WAR.Service
 {
     public class DeckOfCards
     {
