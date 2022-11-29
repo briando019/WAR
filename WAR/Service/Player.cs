@@ -13,52 +13,57 @@ namespace WAR.Service
 
         public int BlockSlap(int blockInt)
         {
-            throw new NotImplementedException();
+            Random random= new Random();
+            int blockDefenceNumber = random.Next(100);
+            return blockDefenceNumber;
         }
 
         public void DrawCard(Card cardDrawn)
         {
-            throw new NotImplementedException();
+            PlayerHand.Add(cardDrawn);
         }
 
         public int getSlapBlockCount()
         {
-            throw new NotImplementedException();
+            return this.blockedSlaps;
         }
 
         public int getSlapCount()
         {
-            throw new NotImplementedException();
+            return this.beenSlapped;
         }
 
         public List<Card> LookAtHand()
         {
-            throw new NotImplementedException();
+            return this.PlayerHand;
         }
 
         public Card PickCard(int selectedCardFromHand)
         {
-            throw new NotImplementedException();
+            Card cardPicked = PlayerHand[selectedCardFromHand];
+            return cardPicked;
         }
 
         public void resetPlayerHand()
         {
-            throw new NotImplementedException();
+            PlayerHand.Clear();
         }
 
         public void increaseBlockCount()
         {
-            throw new NotImplementedException();
+            this.blockedSlaps++;
         }
 
         public void increaseSlapCount()
         {
-            throw new NotImplementedException();
+            this.beenSlapped++;
         }
 
         public int SlapAttack()
         {
-            throw new NotImplementedException();
+            Random random= new Random();
+            int slapAttackDmg = random.Next(100);
+            return slapAttackDmg;
         }
     }
 }
