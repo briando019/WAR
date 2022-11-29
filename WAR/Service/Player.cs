@@ -36,7 +36,7 @@ namespace WAR.Service
             throw new NotImplementedException();
         }
 
-        public int PickCard(int selectedCardFromHand)
+        public Card PickCard(int selectedCardFromHand)
         {
             throw new NotImplementedException();
         }

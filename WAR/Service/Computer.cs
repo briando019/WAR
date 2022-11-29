@@ -23,20 +23,20 @@ namespace WAR.Service
 
         public int getSlapBlockCount()
         {
-            throw new NotImplementedException();
+            return this.blockedSlaps;
         }
 
         public int getSlapCount()
         {
-            throw new NotImplementedException();
+            return this.beenSlapped;
         }
 
         public List<Card> LookAtHand()
         {
-            throw new NotImplementedException();
+            return this.PlayerHand;
         }
 
-        public int PickCard(int selectedCardFromHand)
+        public Card PickCard(int selectedCardFromHand)
         {
             throw new NotImplementedException();
         }

@@ -14,7 +14,7 @@ namespace WAR.Interfaces
 
         public List<Card> LookAtHand();
 
-        public int PickCard(int selectedCardFromHand);
+        public Card PickCard(int selectedCardFromHand);
 
         public int SlapAttack(int slapAttackInt);
         public int BlockSlap(int blockInt);
