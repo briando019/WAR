@@ -38,27 +38,30 @@ namespace WAR.Service
 
         public Card PickCard(int selectedCardFromHand)
         {
-            throw new NotImplementedException();
+            Card cardPicked = PlayerHand[selectedCardFromHand];
+            return cardPicked;
         }
 
         public void resetPlayerHand()
         {
-            throw new NotImplementedException();
+            PlayerHand.Clear();
         }
 
-        public void setBlockCount()
+        public void increaseBlockCount()
         {
-            throw new NotImplementedException();
+            this.blockedSlaps++;
         }
 
-        public void setSlapCount()
+        public void increaseSlapCount()
         {
-            throw new NotImplementedException();
+            this.beenSlapped++;
         }
 
-        public int SlapAttack(int slapAttackInt)
+        public int SlapAttack()
         {
-            throw new NotImplementedException();
+            Random random = new Random();
+            int slapAttackDmg = random.Next(100);
+           return slapAttackDmg;
         }
     }
 }

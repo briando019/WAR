@@ -46,17 +46,17 @@ namespace WAR.Service
             throw new NotImplementedException();
         }
 
-        public void setBlockCount()
+        public void increaseBlockCount()
         {
             throw new NotImplementedException();
         }
 
-        public void setSlapCount()
+        public void increaseSlapCount()
         {
             throw new NotImplementedException();
         }
 
-        public int SlapAttack(int slapAttackInt)
+        public int SlapAttack()
         {
             throw new NotImplementedException();
         }

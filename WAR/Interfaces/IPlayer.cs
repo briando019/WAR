@@ -16,13 +16,13 @@ namespace WAR.Interfaces
 
         public Card PickCard(int selectedCardFromHand);
 
-        public int SlapAttack(int slapAttackInt);
+        public int SlapAttack();
         public int BlockSlap(int blockInt);
         public int getSlapCount();
         public int getSlapBlockCount();
         public void resetPlayerHand();
-        public void setSlapCount();
-        public void setBlockCount();
+        public void increaseSlapCount();
+        public void increaseBlockCount();
 
         
 
