@@ -16,7 +16,7 @@ namespace WAR.Service
             throw new NotImplementedException();
         }
 
-        public Card DrawCard(DeckOfCards deckOfCards)
+        public Card DrawCard(Card cardDrawn)
         {
             throw new NotImplementedException();
         }

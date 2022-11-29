@@ -1,4 +1,5 @@
-﻿using WAR.Service;
+﻿using WAR.Models;
+using WAR.Service;
 
 namespace WAR.Interfaces
 {
@@ -9,7 +10,7 @@ namespace WAR.Interfaces
         public int beenSlapped { get; set; }
         public int blockedSlaps { get; set; }
 
-        public Card DrawCard(DeckOfCards deckOfCards);
+        public Card DrawCard(Card cardDrawn);
 
         public List<Card> LookAtHand();
 
