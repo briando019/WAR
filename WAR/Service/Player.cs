@@ -12,6 +12,7 @@ namespace WAR.Service
             this.score = 0;
             this.blockedSlaps = 0;
             this.beenSlapped = 0;
+            
         }
 
         public int BlockSlap(int blockInt)
@@ -78,6 +79,9 @@ namespace WAR.Service
              this.score = this.score++;
         }
 
-        
+        public int handCardCount()
+        {
+            return this.PlayerHand.Count;
+        }
     }
 }

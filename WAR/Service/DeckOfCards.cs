@@ -1,4 +1,5 @@
 ﻿using System;
+using WAR.Interfaces;
 using WAR.Models;
 
 namespace WAR.Service
@@ -46,9 +47,9 @@ namespace WAR.Service
         /// This will deal out 5 cards to a player
         /// </summary>
         /// <param name="player">Takes in a Player Object</param>
-        public void dealCards(Player player)
+        public void dealCards(IPlayer player)
         {
-            while(player.PlayerHand.Count != dealOutLimit)
+            while(player.handCardCount() != dealOutLimit)
             {
                 Card cardDrawn = this.removeFromTop();
                 player.DrawCard(cardDrawn);

@@ -21,6 +21,7 @@ namespace WAR.Interfaces
         public void increaseBlockCount();
         public int getScore();
         public void increaseScorePoints();
+        public int handCardCount();
 
         
 

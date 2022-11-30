@@ -78,5 +78,10 @@ namespace WAR.Service
         {
             this.score = this.score++;
         }
+
+        public int handCardCount()
+        {
+            return this.PlayerHand.Count;
+        }
     }
 }
