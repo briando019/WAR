@@ -11,7 +11,7 @@ namespace WAR.Service
             this.PlayerHand = new List<Card>();
             this.score = 0;
             this.blockedSlaps = 0;
-            this.blockedSlaps = 0;
+            this.beenSlapped = 0;
         }
 
         public int BlockSlap(int blockInt)
@@ -54,12 +54,12 @@ namespace WAR.Service
 
         public void increaseBlockCount()
         {
-            this.blockedSlaps++;
+            this.blockedSlaps =this.blockedSlaps++;
         }
 
         public void increaseSlapCount()
         {
-            this.beenSlapped++;
+            this.beenSlapped =this.beenSlapped++;
         }
 
         public int SlapAttack()
@@ -67,6 +67,16 @@ namespace WAR.Service
             Random random = new Random();
             int slapAttackDmg = random.Next(100);
            return slapAttackDmg;
+        }
+
+        public int getScore()
+        {
+            return this.score;
+        }
+
+        public void increaseScorePoints()
+        {
+            this.score = this.score++;
         }
     }
 }

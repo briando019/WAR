@@ -1,15 +1,18 @@
 ﻿using WAR.Interfaces;
 using WAR.Models;
+using WAR.Models.BaseModels;
 
 namespace WAR.Service
 {
-    public class Player : IPlayer
+    public class Player : PlayerBaseModel, IPlayer
 
     {
-        public List<Card> PlayerHand { get; set; }
-        public int score { get; set; }
-        public int beenSlapped { get; set; }
-        public int blockedSlaps { get; set; }
+        public Player() {
+            this.PlayerHand = new List<Card>();
+            this.score = 0;
+            this.blockedSlaps = 0;
+            this.beenSlapped = 0;
+        }
 
         public int BlockSlap(int blockInt)
         {
@@ -51,12 +54,12 @@ namespace WAR.Service
 
         public void increaseBlockCount()
         {
-            this.blockedSlaps++;
+            this.blockedSlaps = this.blockedSlaps++;
         }
 
         public void increaseSlapCount()
         {
-            this.beenSlapped++;
+            this.beenSlapped = this.beenSlapped++;
         }
 
         public int SlapAttack()
@@ -65,5 +68,16 @@ namespace WAR.Service
             int slapAttackDmg = random.Next(100);
             return slapAttackDmg;
         }
+        public int getScore()
+        {
+            return this.score;
+        }
+
+        public void increaseScorePoints()
+        {
+             this.score = this.score++;
+        }
+
+        
     }
 }

@@ -17,7 +17,10 @@ namespace WAR.Controllers
 
         public IActionResult Index()
         {
-            
+            Player player = new Player();
+            player.beenSlapped = 42;
+            Computer computerq = new Computer();
+            computerq.increaseSlapCount
             return View();
         }
 

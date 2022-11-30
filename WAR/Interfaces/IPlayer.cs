@@ -19,6 +19,8 @@ namespace WAR.Interfaces
         public void resetPlayerHand();
         public void increaseSlapCount();
         public void increaseBlockCount();
+        public int getScore();
+        public void increaseScorePoints();
 
         
 
