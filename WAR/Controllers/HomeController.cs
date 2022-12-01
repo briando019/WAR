@@ -18,9 +18,8 @@ namespace WAR.Controllers
 
         public IActionResult Index()
         {
-            List<Card> cards = new List<Card>();
-           cards = deckOfCards.createDeck();
-            return View(cards);
+
+            return View(deckOfCards);
         }
 
         public IActionResult Rules()
@@ -33,6 +32,16 @@ namespace WAR.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Overlay()
+        {
+            return PartialView();
+        }
+
+        public IActionResult CardInHand()
+        {
+            return PartialView();
         }
     }
 }

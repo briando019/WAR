@@ -1,3 +1,13 @@
 ﻿body {
     background: #132B41;
 }
+
+.CardInHand {
+
+}
+
+.CardInHand:hover{
+    border: 4px dashed #30bf79;
+    transition: 0.3s all;
+    border-radius: 15px;
+}

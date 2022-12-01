@@ -2,7 +2,7 @@
 using WAR.Interfaces;
 using WAR.Models;
 
-namespace WAR.Service
+namespace WAR
 {
     public class DeckOfCards
     {
@@ -11,6 +11,11 @@ namespace WAR.Service
         public DeckOfCards()
         {
             this.cardDeck = createDeck();
+        }
+
+        public Card getCard(int index)
+        {
+            return cardDeck[index];
         }
 
         public Card removeFromTop()
@@ -60,7 +65,7 @@ namespace WAR.Service
         /// This is a private method used to create a new deck of 52 cards
         /// </summary>
         /// <returns>Deck of cards</returns>
-        public List<Card> createDeck()
+        private List<Card> createDeck()
         {
             List<Card> newDeck = new List<Card>
             {
