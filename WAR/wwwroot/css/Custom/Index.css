@@ -13,7 +13,6 @@
 }
 #GameOptions{
     display:flex;
-    justify-content:space-between;
 }
 .topLeft{
     width:200px;
