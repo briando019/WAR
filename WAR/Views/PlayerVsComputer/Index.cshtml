@@ -1,11 +1,10 @@
 ﻿<link type="text/css" rel="stylesheet" href="/css/Custom/Index.css" />
+<script src="https://kit.fontawesome.com/e913d29163.js" crossorigin="anonymous"></script>
 
 @{
     ViewData["Title"] = "Player Vs Computer";
 }
-
 <div class="row" id="GameOptions">
-    <div class="col-md-3">
-        Hello
-    </div>
+    @Html.Partial("~/Views/PlayerVsComputer/playerInformationPartialView.cshtml")
 </div>
+

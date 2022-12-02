@@ -11,3 +11,25 @@
     transition: 0.3s all;
     border-radius: 15px;
 }
+#GameOptions{
+    display:flex;
+    justify-content:space-between;
+}
+.topLeft{
+    width:200px;
+    margin:10px;
+    border: 3px solid black;
+    background-color:grey;
+    justify-content:flex-start;
+}
+.topRight {
+    width: 200px;
+    margin: 10px;
+    border: 3px solid blue;
+    background-color: grey;
+    margin-left:auto;
+}
+.playerInfo{
+    display:flex;
+    flex-direction:column;
+}
