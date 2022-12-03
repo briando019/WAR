@@ -22,9 +22,13 @@ namespace WAR.Service
             return blockDefenceNumber;
         }
 
-        public void DrawCard(Card cardDrawn)
+        public void DrawCard(Card cardDrawn, DeckOfCards deckOfCards)
         {
-            PlayerHand.Add(cardDrawn);
+            if (deckOfCards.getCardCount() != 0)
+            {
+                PlayerHand.Add(cardDrawn);
+            }
+
         }
 
         public int getSlapBlockCount()

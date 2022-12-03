@@ -6,7 +6,7 @@ namespace WAR.Interfaces
     public interface IPlayer
     {
 
-        public void DrawCard(Card cardDrawn);
+        public void DrawCard(Card cardDrawn, DeckOfCards deckOfCards);
 
         public List<Card> LookAtHand();
 

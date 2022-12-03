@@ -18,6 +18,11 @@ namespace WAR
             return cardDeck[index];
         }
 
+        public int getCardCount()
+        {
+            return this.cardDeck.Count();
+        }
+
         public Card removeFromTop()
         {
             //ToDo: return card removed
