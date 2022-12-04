@@ -18,7 +18,7 @@ namespace WAR.Controllers
 
         public IActionResult Index()
         {
-
+            deckOfCards.shuffle();
             return View(deckOfCards);
         }
 

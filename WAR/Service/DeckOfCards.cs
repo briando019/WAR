@@ -57,12 +57,12 @@ namespace WAR
         /// This will deal out 5 cards to a player
         /// </summary>
         /// <param name="player">Takes in a Player Object</param>
-        public void dealCards(IPlayer player)
+        public void dealCards(IPlayer player, DeckOfCards deckOfCards)
         {
             while(player.handCardCount() != dealOutLimit)
             {
                 Card cardDrawn = this.removeFromTop();
-                player.DrawCard(cardDrawn);
+                player.DrawCard(cardDrawn, deckOfCards);
             }     
         }
 
