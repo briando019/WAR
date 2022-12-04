@@ -9,7 +9,7 @@ namespace WAR.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private static DeckOfCards deckOfCards = new DeckOfCards();
+        
         public HomeController(ILogger<HomeController> logger)
         {
             
@@ -18,8 +18,8 @@ namespace WAR.Controllers
 
         public IActionResult Index()
         {
-            deckOfCards.shuffle();
-            return View(deckOfCards);
+            
+            return View();
         }
 
         public IActionResult Rules()

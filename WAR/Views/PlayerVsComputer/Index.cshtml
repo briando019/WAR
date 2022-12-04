@@ -1,10 +1,19 @@
-﻿<link type="text/css" rel="stylesheet" href="/css/Custom/Index.css" />
+﻿@model DeckOfCards
+
+<link type="text/css" rel="stylesheet" href="/css/Custom/Index.css" />
+
 <script src="https://kit.fontawesome.com/e913d29163.js" crossorigin="anonymous"></script>
 
 @{
     ViewData["Title"] = "Player Vs Computer";
 }
+
+@*@Html.Partial("Overlay")
+@Html.Partial("CardInHand", Model)*@
+
 <div class="row" id="GameOptions">
     @Html.Partial("~/Views/PlayerVsComputer/playerInformationPartialView.cshtml")
 </div>
+
+
 
