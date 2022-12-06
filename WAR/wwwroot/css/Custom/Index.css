@@ -32,3 +32,28 @@
     display:flex;
     flex-direction:column;
 }
+#cardsPlayed{
+    display:flex;
+    border:solid;
+}
+
+.versus{
+    text-align:center;
+    margin:auto;
+    font-size:50px;
+}
+.playerCardPlayed {
+    border:solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.computerCardPlayed{
+    border:solid;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+
+}
+
+}
