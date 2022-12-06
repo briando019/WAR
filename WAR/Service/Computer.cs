@@ -48,9 +48,10 @@ namespace WAR.Service
         public Card PickCard(int selectedCardFromHand)
         {
             Card cardPicked = PlayerHand[selectedCardFromHand];
+            
             return cardPicked;
         }
-
+        
         public void resetPlayerHand()
         {
             PlayerHand.Clear();
