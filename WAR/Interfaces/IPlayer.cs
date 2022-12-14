@@ -6,11 +6,13 @@ namespace WAR.Interfaces
     public interface IPlayer
     {
 
-        public void DrawCard(Card cardDrawn, DeckOfCards deckOfCards);
+        public void DrawCard(DeckOfCards deckOfCards);
 
         public List<Card> LookAtHand();
 
         public Card PickCard(int selectedCardFromHand);
+
+        public void addCardToHand(Card card);
 
         public int SlapAttack();
         public int BlockSlap(int blockInt);
@@ -22,12 +24,14 @@ namespace WAR.Interfaces
         public int getScore();
         public void increaseScorePoints();
         public int handCardCount();
+        public Card getCard(int index);
 
-        
 
-            
-                
-            
+
+
+
+
+
 
     }
 }

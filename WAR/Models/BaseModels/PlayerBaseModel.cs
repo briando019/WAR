@@ -6,5 +6,6 @@
         protected int score;
         protected int beenSlapped;
         protected int blockedSlaps;
+        protected int SlapsRemaining;
     }
 }

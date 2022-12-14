@@ -13,7 +13,7 @@ namespace WAR
             this.cardDeck = createDeck();
         }
 
-        public Card getCard(int index)
+        public Card getCard(int index)//view card
         {
             return cardDeck[index];
         }
@@ -57,12 +57,12 @@ namespace WAR
         /// This will deal out 5 cards to a player
         /// </summary>
         /// <param name="player">Takes in a Player Object</param>
-        public void dealCards(IPlayer player, DeckOfCards deckOfCards)
+        public void dealCards(IPlayer player)
         {
             while(player.handCardCount() != dealOutLimit)
             {
                 Card cardDrawn = this.removeFromTop();
-                player.DrawCard(cardDrawn, deckOfCards);
+                player.addCardToHand(cardDrawn);
             }     
         }
 

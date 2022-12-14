@@ -1,4 +1,4 @@
-﻿@model DeckOfCards
+﻿@model Player
 
 <link type="text/css" rel="stylesheet" href="/css/Custom/Index.css" />
 
@@ -8,25 +8,15 @@
     ViewData["Title"] = "Player Vs Computer";
 }
 
-@*@Html.Partial("Overlay")
-@Html.Partial("CardInHand", Model)*@
+@Html.Partial("Overlay")
+@Html.Partial("CardInHand", Model)
 
 <div class="row" id="GameOptions">
     @Html.Partial("~/Views/PlayerVsComputer/playerInformationPartialView.cshtml")
 </div>
 <div class="row" id="cardsPlayed">
 
-    <div class="col-md-4 cardBeingPlayedContainer">
-        <img src="~/Card/Back_Of_Card.png" style="width:50%; height:100%; border-radius:25px;"/>
-        <div>Player</div>
-    </div>
-
-    <div class="col-md-4 versus">VERSUS</div>
-
-    <div class=" col-md-4 cardBeingPlayedContainer">
-        <img src="~/Card/Back_Of_Card.png" style="width:50%; height:100%; border-radius:25px;" />
-        <div>Computer</div>
-    </div>
+    @Html.Partial("~/Views/PlayerVsComputer/cardsPlayedPartialView.cshtml")
 </div>
 
 

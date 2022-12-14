@@ -2,7 +2,7 @@
 using WAR.Models;
 using WAR.Models.BaseModels;
 
-namespace WAR.Service
+namespace WAR
 {
     public class Player : PlayerBaseModel, IPlayer
 
@@ -12,6 +12,7 @@ namespace WAR.Service
             this.score = 0;
             this.blockedSlaps = 0;
             this.beenSlapped = 0;
+            this.SlapsRemaining= 0;
             
         }
 
@@ -22,11 +23,11 @@ namespace WAR.Service
             return blockDefenceNumber;
         }
 
-        public void DrawCard(Card cardDrawn, DeckOfCards deckOfCards)
+        public void DrawCard(DeckOfCards deckOfCards)
         {
             if (deckOfCards.getCardCount() != 0)
             {
-                PlayerHand.Add(cardDrawn);
+                PlayerHand.Add(deckOfCards.removeFromTop());
             }
 
         }
@@ -86,6 +87,19 @@ namespace WAR.Service
         public int handCardCount()
         {
             return this.PlayerHand.Count;
+        }
+        public int slapsRemainingCount()
+        {
+            return this.SlapsRemaining--;
+        }
+
+        public void addCardToHand(Card card)
+        {
+            this.PlayerHand.Add(card);   
+        }
+        public Card getCard(int index)
+        {
+            return this.PlayerHand[index];
         }
     }
 }
