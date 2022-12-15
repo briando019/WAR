@@ -25,7 +25,7 @@ namespace WAR
 
         public Card removeFromTop()
         {
-            //ToDo: return card removed
+           
             Card cardRemoved = this.cardDeck[0];
             this.cardDeck.RemoveAt(0);
             return cardRemoved;

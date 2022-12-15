@@ -49,6 +49,7 @@ namespace WAR
 
         public Card PickCard(int selectedCardFromHand)
         {
+            //TODO: Remove card after selection
             Card cardPicked = PlayerHand[selectedCardFromHand];
             return cardPicked;
         }

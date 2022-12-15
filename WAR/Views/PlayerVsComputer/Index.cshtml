@@ -9,8 +9,11 @@
 }
 
 @Html.Partial("Overlay")
-@Html.Partial("CardInHand", Model)
 
+<div class="row" id="newCardInHand">
+    @Html.Partial("CardInHand", Model)
+</div>
+ 
 <div class="row" id="GameOptions">
     @Html.Partial("~/Views/PlayerVsComputer/playerInformationPartialView.cshtml")
 </div>
@@ -19,5 +22,7 @@
     @Html.Partial("~/Views/PlayerVsComputer/cardsPlayedPartialView.cshtml")
 </div>
 
+
+<script type="module" src ="~/js/PlayerVsComputer/Index.js"></script>
 
 
